@@ -6,18 +6,18 @@
     "width": 1363,
     "height": 635
    },
-  "ODNLogo": {
-    "name": "ODNLogo.png",
-    "x": 1978,
-    "y": 3912,
-    "width": 117,
-    "height": 113
+  "parceria": {
+    "name": "parceria.png",
+    "x": 1022,
+    "y": 249,
+    "width": 95,
+    "height": 50
    },
-  "cat": {
-   "name": "gatobr.png",
-   "x": 3022,
-   "y": 2922,
-   "width": 178,
-   "height": 88
+  "carroaz": {
+   "name": "carroaz.png",
+   "x": 1125,
+   "y": -2109,
+   "width": 152,
+   "height": 70
  }
 }

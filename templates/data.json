@@ -13,6 +13,13 @@
     "width": 95,
     "height": 50
    },
+  "logoaz": {
+    "name": "logoaz.png",
+    "x": 319,
+    "y": 3186,
+    "width": 203,
+    "height": 128
+   },
   "carroaz": {
    "name": "carroaz.png",
    "x": 1125,

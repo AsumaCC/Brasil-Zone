@@ -5,26 +5,26 @@
     "y": 1728,
     "width": 1363,
     "height": 635
-    },
+   },
   "parceria": {
-   "name": "parceria.png",
-   "x": 1022,
-   "y": 249,
-   "width": 95,
-   "height": 50
-    },
+    "name": "parceria.png",
+    "x": 1022,
+    "y": 249,
+    "width": 95,
+    "height": 50
+   },
   "logoaz": {
-   "name": "logoaz.png",
-   "x": 319,
-   "y": 3186,
-   "width": 203,
-   "height": 128
+    "name": "logoaz.png",
+    "x": 319,
+    "y": 3186,
+    "width": 203,
+    "height": 128
    },
   "carroaz": {
-   "name": "carroaz.png",
-   "x": 1125,
-   "y": -2109,
-   "width": 152,
-   "height": 70
+    "name": "carroaz.png",
+    "x": 1125,
+    "y": -2109,
+    "width": 152,
+    "height": 70
  }
 }

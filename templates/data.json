@@ -13,12 +13,12 @@
     "width": 498,
     "height": 171
    },
-  "tudo": {
-    "name": "tudo.png",
-    "x": 318,
+  "pt": {
+    "name": "portugal.png",
+    "x": -2857,
     "y": 3034,
-    "width": 477,
-    "height": 279
+    "width": 600,
+    "height": 400
    },
   "parceria": {
     "name": "parceria.png",

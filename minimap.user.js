@@ -53,7 +53,7 @@ window.addEventListener('load', function () {
     var div = document.createElement('div');
     div.setAttribute('class', 'post block bc2');
     div.innerHTML = '<style>.grecaptcha-badge{display: none;}</style>   <div id="minimapbg" style="position: absolute; right: 1em; bottom: 1em;">' +
-'<div class="posy" id="posyt" style="background-color: rgba(6, 214, 2, 0.90); color: blue; text-align: center; line-height: 30px; vertical-align: middle; width: auto; height: auto; border-radius: 0px; padding: 1px;">' +
+'<div class="posy" id="posyt" style="background-color: rgba(6, 214, 2, 0.70); color: blue; text-align: center; line-height: 30px; vertical-align: middle; width: auto; height: auto; border-radius: 0px; padding: 1px;">' +
         '<div id="minimap-text" style="display: none;"></div>' +
         '<div id="minimap-title" style="line-height: 15px;color: rgba(30, 0, 255); font-weight: 900; padding: 2px;"> Brasil-Zone' +
         '<div id="minimap-box" style="position: relative;width:375px;height:250px">' +

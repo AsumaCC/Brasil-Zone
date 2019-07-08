@@ -1,6 +1,6 @@
-# Império Brasil 
+# Brasil-Zone
 
-> Mapa criado para a facção Império Brasil.
+> Mapa criado para a facção Brasil-Zone.
 
 ## Instalação
 > Siga as etapas para baixar o minimapa, caso tenha duvida contacte um staff.

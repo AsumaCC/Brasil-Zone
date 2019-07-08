@@ -1,6 +1,6 @@
-# AncapZone
+# Império Brasil 
 
-> Mapa criado para a facção AncapZone.
+> Mapa criado para a facção Império Brasil.
 
 ## Instalação
 > Siga as etapas para baixar o minimapa, caso tenha duvida contacte um staff.
@@ -14,7 +14,18 @@
 
 
 #### Etapa 2: Instalar o minimapa.
-* [Clique aqui](https://github.com/zAsuma/ancapzone/raw/master/minimap.user.js)
+* [Clique aqui](https://github.com/AsumaCC/Brasil-Zone/raw/master/minimap.user.js)
+
+## Informações
+> Lista de informações para contactar.
+
+#### Servidor discord:
+* [Discord](https://discord.gg/B6RF4gw)
+
+#### Criador:
+* [Asuma] Asuma#1590
+
+
 
 
 

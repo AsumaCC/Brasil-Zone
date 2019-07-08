@@ -64,7 +64,7 @@ window.addEventListener('load', function () {
         '</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">+</span>  /  ' +
         '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">-</span>' +
         '</div><div id="minimap-tittle" style="line-height:10px;">' +
-        '<span id="minimap-ancap" style="font-weight:bold;text-align:center;"> Brasil-Zone' +
+        '<span id="minimap-ancap" style="font-weight:bold;text-align:center;color:darkgreen;"> Brasil-Zone' +
         '</div>' +
         '</div>';
     document.body.appendChild(div);

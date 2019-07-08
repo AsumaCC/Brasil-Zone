@@ -52,19 +52,18 @@ window.addEventListener('load', function () {
 
     var div = document.createElement('div');
     div.setAttribute('class', 'post block bc2');
-    div.innerHTML = '<style>.grecaptcha-badge,#message{display: none;}</style>\n' +
-        '<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://i.imgur.com/2qu5Wch.png); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 5px; padding: 5px;">' +
+    div.innerHTML = '<style>.grecaptcha-badge{display: none;}</style>   <div id="minimapbg" style="position: absolute; right: 1em; bottom: 1em;">' +
+'<div class="posy" id="posyt" style="background-color: rgba(6, 214, 2, 0.90); color: blue; text-align: center; line-height: 30px; vertical-align: middle; width: auto; height: auto; border-radius: 0px; padding: 1px;">' +
         '<div id="minimap-text" style="display: none;"></div>' +
-        '<div id="minimap-box" style="position: relative;width:350px;height:200px">' +
+        '<div id="minimap-title" style="line-height: 15px;color: rgba(30, 0, 255); font-weight: 900; padding: 2px;"> Brasil-Zone' +
+        '<div id="minimap-box" style="position: relative;width:375px;height:250px">' +
         '<canvas id="minimap" style="width: 100%; height: 100%;z-index:1;position:absolute;top:0;left:0;"></canvas>' +
         '<canvas id="minimap-board" style="width: 100%; height: 100%;z-index:2;position:absolute;top:0;left:0;"></canvas>' +
         '<canvas id="minimap-cursor" style="width: 100%; height: 100%;z-index:3;position:absolute;top:0;left:0;"></canvas>' +
-        '</div><div id="minimap-config" style="line-height:20px;">' +
-        '<span id="hide-map" style="cursor:pointer;font-size:18px;">    Esconder' +
-        '</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">+</span>  /  ' +
-        '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">-</span>' +
-        '</div><div id="minimap-tittle" style="line-height:10px;">' +
-        '<span id="minimap-ancap" style="font-weight:bold;text-align:center;color:green;"> Brasil-Zone' +
+        '</div><div id="minimap-config" style="line-height:20px; padding: 0px; font-weight: normal;">' +
+        '<span id="hide-map" style="cursor:pointer;font-weight:normal;">    Esconder' +
+        '</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;font-size:18px;">+</span>  /  ' +
+        '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;font-size:18px;">-</span>' +
         '</div>' +
         '</div>';
     document.body.appendChild(div);
@@ -80,6 +79,7 @@ window.addEventListener('load', function () {
     ctx_minimap = minimap.getContext("2d");
     ctx_minimap_board = minimap_board.getContext("2d");
     ctx_minimap_cursor = minimap_cursor.getContext("2d");
+    document.getElementsByClassName("grecaptcha-badge")[0].style.display = "none";
 
     //No Antialiasing when scaling!
     ctx_minimap.mozImageSmoothingEnabled = false;
@@ -96,7 +96,8 @@ window.addEventListener('load', function () {
         document.getElementById("minimap-box").style.display = "none";
         document.getElementById("minimap-config").style.display = "none";
         document.getElementById("minimap-text").style.display = "block";
-        document.getElementById("minimap-tittle").style.display = "none";
+        document.getElementById("minimap-box").style.display = "none";
+        document.getElementById("minimap-title").style.display = "none";
         document.getElementById("minimap-text").innerHTML = "Mostrar Mapa";
         document.getElementById("minimap-text").style.cursor = "pointer";
     };
@@ -104,7 +105,7 @@ window.addEventListener('load', function () {
         toggle_show = true;
         document.getElementById("minimap-box").style.display = "block";
         document.getElementById("minimap-config").style.display = "block";
-        document.getElementById("minimap-ancap").style.display = "block";
+        document.getElementById("minimap-title").style.display = "block";
         document.getElementById("minimap-text").style.display = "none";
         document.getElementById("minimap-text").style.cursor = "default";
         loadTemplates();
@@ -190,7 +191,6 @@ function toggleShow() {
     if (toggle_show) {
         document.getElementById("minimap-box").style.display = "block";
         document.getElementById("minimap-config").style.display = "block";
-        document.getElementById("minimap-tittle").style.display = "none";
         document.getElementById("minimap-text").style.display = "none";
         document.getElementById("minimapbg").onclick = function () {
         };
@@ -199,7 +199,6 @@ function toggleShow() {
         document.getElementById("minimap-box").style.display = "none";
         document.getElementById("minimap-config").style.display = "none";
         document.getElementById("minimap-text").style.display = "block";
-        document.getElementById("minimap-tittle").style.display = "none";
         document.getElementById("minimap-text").innerHTML = "Mostrar Mapa";
         document.getElementById("minimapbg").onclick = function () {
             toggleShow()
@@ -273,15 +272,12 @@ function loadTemplates() {
     }
     if (needed_templates.length == 0) {
         if (zooming_in == false && zooming_out == false) {
-            document.getElementById("minimap-box").style.display = "none";
-            document.getElementById("minimap-config").style.display = "none";
-            document.getElementById("minimap-text").style.display = "block";
-            document.getElementById("minimap-text").innerHTML = "Não há templates aqui.";
+            document.getElementById("minimap-box").style.display = "block";
+            document.getElementById("minimap-config").style.display = "block";
         }
     } else {
         document.getElementById("minimap-box").style.display = "block";
         document.getElementById("minimap-config").style.display = "block";
-        document.getElementById("minimap-text").style.display = "none";
         counter = 0;
         for (i = 0; i < needed_templates.length; i++) {
             if (image_list[needed_templates[i]] == null) {
@@ -348,7 +344,7 @@ function drawBoard() {
         ctx_minimap_board.moveTo(xoff_m, x + yoff_m);
         ctx_minimap_board.lineTo(bw + xoff_m, x + yoff_m);
     }
-    ctx_minimap_board.strokeStyle = "black";
+    ctx_minimap_board.strokeStyle = "grey";
     ctx_minimap_board.stroke();
 }
 

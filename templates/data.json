@@ -6,12 +6,12 @@
     "width": 1363,
     "height": 635
    },
-  "mainaz": {
-    "name": "main.png",
-    "x": 318,
-    "y": 3013,
-    "width": 498,
-    "height": 171
+  "Flag": {
+    "name": "MegaBandeira.png",
+    "x": 2153,
+    "y": 3105,
+    "width": 1943,
+    "height": 991
    },
   "pt": {
     "name": "portugal.png",

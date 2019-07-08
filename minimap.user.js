@@ -1,13 +1,13 @@
 // ==UserScript==
-// @name         AncapZone
-// @namespace    Discord.io/AncapZone
+// @name         Brasil-Map
+// @namespace    Discord.io/Brasil-Zone
 // @version      1.0.0
-// @description  Aqui não há estado!
-// @coder        Aizu
+// @description  Ave Brasil-Zone
+// @coder        Asuma
 // @match        https://pixelzone.io/*
 // @match        http://pixelzone.io/*
-// @updateURL    http://raw.githubusercontent.com/zAsuma/ancapzone/master/minimap.user.js
-// @downloadURL  http://raw.githubusercontent.com/zAsuma/ancapzone/master/minimap.user.js
+// @updateURL    http://raw.githubusercontent.com/AsumaCC/Brasil-Zone/master/minimap.user.js
+// @downloadURL  http://raw.githubusercontent.com/AsumaCC/Brasil-Zone/master/minimap.user.js
 // ==/UserScript==
 
 Number.prototype.between = function(a, b) {
@@ -16,7 +16,7 @@ Number.prototype.between = function(a, b) {
   return this > min && this < max;
 };
 var range = 25;
-window.baseTepmlateUrl = 'https://raw.githubusercontent.com/zAsuma/ancapzone/master/';
+window.baseTepmlateUrl = 'https://raw.githubusercontent.com/AsumaCC/Brasil-Zone/master/';
 
 window.addEventListener('load', function () {
     //Regular Expression to get coordinates out of URL
@@ -52,8 +52,8 @@ window.addEventListener('load', function () {
 
     var div = document.createElement('div');
     div.setAttribute('class', 'post block bc2');
-    div.innerHTML = '<div id="minimapbg" style="position: absolute; right: 3em; top: 1em;">' +
-        '<div class="posy" id="posyt" style="background-color: rgba(0, 0, 0, 0.75); color: rgb(255, 190, 0); text-align: center; line-height: 30px; vertical-align: middle; width: auto; height: auto; border-radius: 0px; padding: 5px;">' +
+    div.innerHTML = '<style>.grecaptcha-badge,#message{display: none;}</style>\n' +
+        '<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://i.imgur.com/2qu5Wch.png); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 5px; padding: 5px;">' +
         '<div id="minimap-text" style="display: none;"></div>' +
         '<div id="minimap-box" style="position: relative;width:350px;height:200px">' +
         '<canvas id="minimap" style="width: 100%; height: 100%;z-index:1;position:absolute;top:0;left:0;"></canvas>' +
@@ -64,7 +64,7 @@ window.addEventListener('load', function () {
         '</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">+</span>  /  ' +
         '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">-</span>' +
         '</div><div id="minimap-tittle" style="line-height:10px;">' +
-        '<span id="minimap-ancap" style="font-weight:bold;text-align:center;"> AncapZone' +
+        '<span id="minimap-ancap" style="font-weight:bold;text-align:center;"> Brasil-Zone' +
         '</div>' +
         '</div>';
     document.body.appendChild(div);

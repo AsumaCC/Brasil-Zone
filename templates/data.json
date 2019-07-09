@@ -13,6 +13,13 @@
     "width": 1943,
     "height": 991
    },
+  "Imperial": {
+    "name": "imperial.png",
+    "x": 1463,
+    "y": 2591,
+    "width": 708,
+    "height": 423
+   },
   "pt": {
     "name": "portugal.png",
     "x": -2857,

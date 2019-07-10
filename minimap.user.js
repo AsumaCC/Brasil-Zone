@@ -53,15 +53,15 @@ window.addEventListener('load', function () {
     var div = document.createElement('div');
     div.setAttribute('class', 'post block bc2');
     div.innerHTML = '<style>.grecaptcha-badge{display: none;}</style>   <div id="minimapbg" style="position: absolute; right: 1em; bottom: 1em;">' +
-'<div class="posy" id="posyt" style="background-color: rgba(6, 214, 2, 0.70); color: blue; text-align: center; line-height: 30px; vertical-align: middle; width: auto; height: auto; border-radius: 0px; padding: 1px;">' +
+'<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://i.imgur.com/2qu5Wch.png); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 1px; padding: 1px;">' +
         '<div id="minimap-text" style="display: none;"></div>' +
-        '<div id="minimap-title" style="line-height: 15px;color: rgba(30, 0, 255); font-weight: 900; padding: 2px;"> Brasil-Zone' +
-        '<div id="minimap-box" style="position: relative;width:375px;height:250px">' +
+        '<div id="minimap-title" style="line-height: 15px; padding: 0px; color: rgba(30, 0, 255); font-weight: bold; font-size: 0.9em; background-color:rgba(6, 214, 2, 0.95);"> Brasil-Zone' +
+        '<div id="minimap-box" style="position: relative;width:375px;height:250px;">' +
         '<canvas id="minimap" style="width: 100%; height: 100%;z-index:1;position:absolute;top:0;left:0;"></canvas>' +
-        '<canvas id="minimap-board" style="width: 100%; height: 100%;z-index:2;position:absolute;top:0;left:0;"></canvas>' +
+        '<canvas id="minimap-board" style="width: 100%; height: 100%;z-index:2;position:absolute;top:0;left:0;background-color:rgba(255, 255, 255, 0);"></canvas>' +
         '<canvas id="minimap-cursor" style="width: 100%; height: 100%;z-index:3;position:absolute;top:0;left:0;"></canvas>' +
-        '</div><div id="minimap-config" style="line-height:20px; padding: 0px; font-weight: normal;">' +
-        '<span id="hide-map" style="cursor:pointer;font-weight:normal;">    Esconder' +
+        '</div><div id="minimap-config" style="line-height:20px; padding: 1px; font-weight: normal; background-color:rgba(6, 214, 2, 0.95); font-size: 1.2em;">' +
+        '<span id="hide-map" style="cursor:pointer;font-weight:bold; color: red;">    OFF' +
         '</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;font-size:18px;">+</span>  /  ' +
         '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;font-size:18px;">-</span>' +
         '</div>' +
@@ -98,6 +98,9 @@ window.addEventListener('load', function () {
         document.getElementById("minimap-text").style.display = "block";
         document.getElementById("minimap-box").style.display = "none";
         document.getElementById("minimap-title").style.display = "none";
+        document.getElementById("minimap-text").style.backgroundColor = "rgba(6, 214, 2, 0.95)";
+        document.getElementById("minimap-text").style.fontWeight = "bold";
+        document.getElementById("minimap-text").style.color = "blue";
         document.getElementById("minimap-text").innerHTML = "Mostrar Mapa";
         document.getElementById("minimap-text").style.cursor = "pointer";
     };
@@ -273,11 +276,12 @@ function loadTemplates() {
     if (needed_templates.length == 0) {
         if (zooming_in == false && zooming_out == false) {
             document.getElementById("minimap-box").style.display = "block";
-            document.getElementById("minimap-config").style.display = "block";
+            document.getElementById("minimap-text").style.display = "none";
+            document.getElementById("minimap-text").innerHTML = "Não tem nada aqui.";
         }
     } else {
         document.getElementById("minimap-box").style.display = "block";
-        document.getElementById("minimap-config").style.display = "block";
+        document.getElementById("minimap-text").style.display = "none";
         counter = 0;
         for (i = 0; i < needed_templates.length; i++) {
             if (image_list[needed_templates[i]] == null) {
@@ -334,7 +338,7 @@ function drawBoard() {
     var xoff_m = (minimap.width / 2) % zoomlevel - zoomlevel;
     var yoff_m = (minimap.height / 2) % zoomlevel - zoomlevel;
     var z = 1 * zoomlevel;
-
+    ctx_minimap_board.lineWidth = 0.2;
     for (var x = 0; x <= bw; x += z) {
         ctx_minimap_board.moveTo(x + xoff_m, yoff_m);
         ctx_minimap_board.lineTo(x + xoff_m, bh + yoff_m);
@@ -360,8 +364,8 @@ function drawCursor() {
     yoff_c = y - y_top;
 
     ctx_minimap_cursor.beginPath();
-    ctx_minimap_cursor.lineWidth = zoomlevel / 3;
-    ctx_minimap_cursor.strokeStyle = "gold";
+    ctx_minimap_cursor.lineWidth = zoomlevel / 5;
+    ctx_minimap_cursor.strokeStyle = "yellow";
     ctx_minimap_cursor.rect(zoomlevel * xoff_c, zoomlevel * yoff_c, zoomlevel, zoomlevel);
     ctx_minimap_cursor.stroke();
 

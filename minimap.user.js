@@ -55,7 +55,7 @@ window.addEventListener('load', function () {
     div.innerHTML = '<style>.grecaptcha-badge{display: none;}</style>   <div id="minimapbg" style="position: absolute; right: 1em; bottom: 1em;">' +
 '<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://i.imgur.com/2qu5Wch.png); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 1px; padding: 1px;">' +
         '<div id="minimap-text" style="display: none;"></div>' +
-        '<div id="minimap-title" style="line-height: 15px; padding: 0px; color: rgba(30, 0, 255); font-weight: bold; font-size: 0.9em; background-color:rgba(6, 214, 2, 0.95);"> 👑 Império Brasil 👑' +
+        '<div id="minimap-title" style="line-height: 15px; padding: 0px; color: gold; font-weight: bold; font-size: 0.9em; background-color:rgba(0, 0, 0, 0.75);"> 👑 Império Brasil 👑' +
         '<div id="minimap-box" style="position: relative;width:375px;height:250px;">' +
         '<canvas id="minimap" style="width: 100%; height: 100%;z-index:1;position:absolute;top:0;left:0;"></canvas>' +
         '<canvas id="minimap-board" style="width: 100%; height: 100%;z-index:2;position:absolute;top:0;left:0;background-color:rgba(255, 255, 255, 0);"></canvas>' +

@@ -1,45 +1,10 @@
 {
-  "Worldmap": {
-    "name": "wm.png",
-    "x": -273,
-    "y": 1728,
-    "width": 1363,
-    "height": 635
-   },
-  "Flag": {
-    "name": "MegaBR.png",
-    "x": 2153,
-    "y": 3105,
-    "width": 1943,
-    "height": 991
-   },
-  "Imperial": {
-    "name": "imperial.png",
+  "tudo": {
+    "name": "abr.png",
     "x": 1463,
     "y": 2591,
-    "width": 708,
-    "height": 423
-   },
-  "pt": {
-    "name": "portugal.png",
-    "x": -2857,
-    "y": 3034,
-    "width": 600,
-    "height": 400
-   },
-  "parceria": {
-    "name": "parceria.png",
-    "x": 1022,
-    "y": 249,
-    "width": 95,
-    "height": 50
-   },
-  "logoaz": {
-    "name": "logoaz.png",
-    "x": 319,
-    "y": 3186,
-    "width": 203,
-    "height": 128
+    "width": 2633,
+    "height": 1505
    },
   "carroaz": {
     "name": "carroaz.png",

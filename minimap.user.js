@@ -53,14 +53,14 @@ window.addEventListener('load', function () {
     var div = document.createElement('div');
     div.setAttribute('class', 'post block bc2');
     div.innerHTML = '<style>.grecaptcha-badge{display: none;}</style>   <div id="minimapbg" style="position: absolute; right: 1em; bottom: 1em;">' +
-'<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://i.imgur.com/2qu5Wch.png); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 1px; padding: 1px;">' +
+'<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://i.imgur.com/2qu5Wch.png); color: red; text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 3px; padding: 0px;">' +
         '<div id="minimap-text" style="display: none;"></div>' +
-        '<div id="minimap-title" style="line-height: 15px; padding: 0px; color: gold; font-weight: bold; font-size: 0.9em; background-color:rgba(0, 0, 0, 0.75);"> 👑 Império Brasil 👑' +
-        '<div id="minimap-box" style="position: relative;width:375px;height:250px;">' +
+        '<div id="minimap-title" style="line-height: 20px; padding: 0px;border: 1px solid red; color: gold; font-weight: bold; font-size: 0.9em; background-color:rgba(0, 0, 0,0.75);"> 👑 Império Brasil 👑' +
+        '<div id="minimap-box" style="position: relative;width:375px;height:250px;background-color:rgba(0, 0, 0, 0.75);padding:1px;border-top: 1px solid red;">' +
         '<canvas id="minimap" style="width: 100%; height: 100%;z-index:1;position:absolute;top:0;left:0;"></canvas>' +
-        '<canvas id="minimap-board" style="width: 100%; height: 100%;z-index:2;position:absolute;top:0;left:0;background-color:rgba(255, 255, 255, 0);"></canvas>' +
+        '<canvas id="minimap-board" style="width: 100%; height: 100%;z-index:2;position:absolute;top:0;left:0;background-color:rgba(0, 0, 0, 0);"></canvas>' +
         '<canvas id="minimap-cursor" style="width: 100%; height: 100%;z-index:3;position:absolute;top:0;left:0;"></canvas>' +
-        '</div><div id="minimap-config" style="line-height:20px; padding: 1px; font-weight: normal; background-color:rgba(6, 214, 2, 0.95); font-size: 1.2em;">' +
+        '</div><div id="minimap-config" style="line-height:20px; padding: 1px; font-weight: normal; background-color:rgba(0, 0, 0,0.75); font-size: 1.2em;border-top: 1px solid red; text-align: center;">' +
         '<span id="hide-map" style="cursor:pointer;font-weight:bold; color: red;">    OFF' +
         '</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;font-size:18px;">+</span>  /  ' +
         '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;font-size:18px;">-</span>' +
@@ -338,7 +338,7 @@ function drawBoard() {
     var xoff_m = (minimap.width / 2) % zoomlevel - zoomlevel;
     var yoff_m = (minimap.height / 2) % zoomlevel - zoomlevel;
     var z = 1 * zoomlevel;
-    ctx_minimap_board.lineWidth = 0.2;
+    ctx_minimap_board.lineWidth = 0.3;
     for (var x = 0; x <= bw; x += z) {
         ctx_minimap_board.moveTo(x + xoff_m, yoff_m);
         ctx_minimap_board.lineTo(x + xoff_m, bh + yoff_m);
@@ -348,7 +348,7 @@ function drawBoard() {
         ctx_minimap_board.moveTo(xoff_m, x + yoff_m);
         ctx_minimap_board.lineTo(bw + xoff_m, x + yoff_m);
     }
-    ctx_minimap_board.strokeStyle = "grey";
+    ctx_minimap_board.strokeStyle = "lightgrey";
     ctx_minimap_board.stroke();
 }
 
@@ -364,8 +364,8 @@ function drawCursor() {
     yoff_c = y - y_top;
 
     ctx_minimap_cursor.beginPath();
-    ctx_minimap_cursor.lineWidth = zoomlevel / 5;
-    ctx_minimap_cursor.strokeStyle = "yellow";
+    ctx_minimap_cursor.lineWidth = zoomlevel / 4;
+    ctx_minimap_cursor.strokeStyle = "red";
     ctx_minimap_cursor.rect(zoomlevel * xoff_c, zoomlevel * yoff_c, zoomlevel, zoomlevel);
     ctx_minimap_cursor.stroke();
 

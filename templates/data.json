@@ -6,11 +6,11 @@
     "width": 2633,
     "height": 1505
    },
-  "carroaz": {
-    "name": "carroaz.png",
-    "x": 1125,
-    "y": -2109,
-    "width": 152,
-    "height": 70
+  "guerreira": {
+    "name": "guerreira.png",
+    "x": 1463,
+    "y": 2220,
+    "width": 400,
+    "height": 400
  }
 }

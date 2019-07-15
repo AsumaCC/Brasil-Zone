@@ -12,5 +12,12 @@
     "y": 2220,
     "width": 400,
     "height": 400
+   },
+  "senna": {
+    "name": "senna.png",
+    "x": 327,
+    "y": 440,
+    "width": 202,
+    "height": 202
  }
 }
